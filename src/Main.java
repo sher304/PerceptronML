@@ -35,23 +35,25 @@ public class Main {
             predictedLabels.add(predicted);
         }
 
+        System.out.println(Arrays.toString(perceptron.getWeights()));
+
+        System.out.println(perceptron.getThreshold());
         EvaluationMetrics evaluationMetrics = new EvaluationMetrics();
         System.out.println("Accuracy: " + evaluationMetrics.measureAccuracy(realLabels, predictedLabels));
-
-        plotDecisionRough(perceptron);
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Predict your own flower!");
-        System.out.print("Enter sepal length: ");
-        double sepalLength = scanner.nextDouble();
-        System.out.print("Enter sepal width: ");
-        double sepalWidth = scanner.nextDouble();
-        System.out.print("Enter petal length: ");
-        double petalLength = scanner.nextDouble();
-        System.out.print("Enter petal width: ");
-        double petalWidth = scanner.nextDouble();
-        double[] input = {sepalLength, sepalWidth, petalLength, petalWidth};
-        int prediction = perceptron.predict(input);
-        System.out.println("Predicted class: " + (prediction == 1 ? "Setosa" : "Not Setosa"));
+//        plotDecisionRough(perceptron);
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Predict your own flower!");
+//        System.out.print("Enter sepal length: ");
+//        double sepalLength = scanner.nextDouble();
+//        System.out.print("Enter sepal width: ");
+//        double sepalWidth = scanner.nextDouble();
+//        System.out.print("Enter petal length: ");
+//        double petalLength = scanner.nextDouble();
+//        System.out.print("Enter petal width: ");
+//        double petalWidth = scanner.nextDouble();
+//        double[] input = {sepalLength, sepalWidth, petalLength, petalWidth};
+//        int prediction = perceptron.predict(input);
+//        System.out.println("Predicted class: " + (prediction == 1 ? "Setosa" : "Not Setosa"));
     }
 
     public static void plotDecisionRough(Perceptron p) {

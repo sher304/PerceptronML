@@ -58,4 +58,8 @@ public class Perceptron {
     public double[] getWeights() {
         return weights;
     }
+
+    public double getThreshold() {
+        return threshold;
+    }
 }

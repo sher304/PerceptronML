@@ -55,26 +55,4 @@ public class Main {
 //        int prediction = perceptron.predict(input);
 //        System.out.println("Predicted class: " + (prediction == 1 ? "Setosa" : "Not Setosa"));
     }
-
-    public static void plotDecisionRough(Perceptron p) {
-        System.out.println("Plot the resulting decision:");
-        for (int i = 10; i >= -10; i--) {
-            for (int j = -10; j <= 10; j++) {
-                double a = j * 0.5;
-                double b = i * 0.5;
-                double[] point = { a, b };
-
-                int result = p.predict(point);
-
-                if (result == 1) {
-                    System.out.print("1");
-                } else {
-                    System.out.print("0");
-                }
-            }
-            System.out.println();
-        }
-    }
-
-
 }
